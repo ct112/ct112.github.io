@@ -16,17 +16,13 @@
     <script>
         function time() {
             let current_time = new Date();
-        return [current_time.getHours(), current_time.getMinutes(), current_time.getSeconds()];
+            return [current_time.getHours(), current_time.getMinutes(), current_time.getSeconds()];
         }
 
         function am_pm_selector(){
             let t = time();
-            if (t[0] >= 12) {
-                return 'PM';
-            } else {
-                return 'AM';
-            }
-        }
+            let am_pm = (t[0] >= 12) ? 'PM': 'AM';
+                return am_pm;
 
         function pad_zeros(selection_criterion){
             let t = time();
