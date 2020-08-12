@@ -21,8 +21,12 @@
 
         function am_pm_selector(){
             let t = time();
-            let am_pm = (t[0] >= 12) ? 'PM': 'AM';
-                return am_pm;
+            if (t[0] >= 12) {
+                return 'PM';
+            } else {
+                return 'AM';
+            }   
+                
 
         function pad_zeros(selection_criterion){
             let t = time();
